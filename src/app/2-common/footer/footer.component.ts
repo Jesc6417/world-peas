@@ -38,6 +38,7 @@ import {SocialNetworkComponent} from "./social-network/social-network.component"
             </ul>
         </app-section>
         <app-social-network />
+        <p class="disclaimer">World Peas © 2024</p>
     </footer>
   `,
   styles: `
@@ -45,7 +46,7 @@ import {SocialNetworkComponent} from "./social-network/social-network.component"
   
   footer {
     padding: 20px;
-    height: 400px;
+    height: 300px;
     background-color: $primary-color;
     
     display: grid;
@@ -76,7 +77,7 @@ import {SocialNetworkComponent} from "./social-network/social-network.component"
       }
     }
     
-    app-social-network {
+    app-social-network, .disclaimer {
       grid-column: 2;
       place-self: center;
     }

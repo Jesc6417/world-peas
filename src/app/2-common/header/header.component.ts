@@ -1,12 +1,13 @@
 import { Component } from '@angular/core';
+import {RouterLink} from "@angular/router";
 import { MenuComponent } from './menu/menu.component';
 
 @Component({
   selector: 'app-header',
-  standalone: true, imports: [ MenuComponent ],
+  standalone: true, imports: [ MenuComponent, RouterLink ],
   template: `
     <nav>
-      <span class="company">World Peas</span>
+      <span class="company"><a routerLink="/">World Peas</a></span>
       <app-menu />
     </nav>
   `,
@@ -19,8 +20,9 @@ import { MenuComponent } from './menu/menu.component';
 
       padding: 0 96px;
 
-      .company {
+      .company a {
         color: #426B1F;
+        text-decoration: none;  
 
         font-family: 'Newsreader', serif;
         font-size: 32px;
