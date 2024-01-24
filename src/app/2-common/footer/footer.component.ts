@@ -1,64 +1,43 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 import {SvgIconComponent} from "../svg-icon/svg-icon.component";
+import {SectionComponent} from "./section/section.component";
+import {SocialNetworkComponent} from "./social-network/social-network.component";
 
 @Component({
   selector: 'app-footer',
   standalone: true,
   imports: [
-    SvgIconComponent
+    SvgIconComponent,
+    SectionComponent,
+    SocialNetworkComponent
   ],
   template: `
     <footer class="footer">
-        <div class="left">
-            <div class="section">
-                <h3>Services</h3>
-            </div>
-            <ul>
+        <app-section>
+            <h3 title>Services</h3>
+            <ul items>
                 <li>Shop</li>
                 <li>Online Command</li>
                 <li>Reservations</li>
             </ul>
-        </div>
-        <div class="middle">
-            <div class="section">
-                <h3>About</h3>
-            </div>
-            <ul>
+        </app-section>
+        <app-section>
+            <h3 title>About</h3>
+            <ul items>
                 <li>Who we are</li>
                 <li>How to find us</li>
                 <li>Newstand</li>
             </ul>
-        </div>
-        <div class="right">
-            <div class="section">
-                <h3>Careers</h3>
-            </div>
-            <ul>
+        </app-section>
+        <app-section>
+            <h3 title>Careers</h3>
+            <ul items>
                 <li>Job openings</li>
                 <li>Employee success</li>
                 <li>Benefits</li>
             </ul>
-        </div>
-        <div class="media">
-            <app-svg-icon
-              [path]="'assets/icons/social-network/facebook.svg'"     
-              width="30px"
-              height="30px"
-              [backgroundColor]="'#fff'"
-            />
-            <app-svg-icon
-                    [path]="'assets/icons/social-network/instagram.svg'"
-                    width="30px"
-                    height="30px"
-                    [backgroundColor]="'#fff'"
-            />
-            <app-svg-icon
-                    [path]="'assets/icons/social-network/twitter.svg'"
-                    width="30px"
-                    height="30px"
-                    [backgroundColor]="'#fff'"
-            />
-        </div>
+        </app-section>
+        <app-social-network />
     </footer>
   `,
   styles: `
@@ -77,18 +56,15 @@ import {SvgIconComponent} from "../svg-icon/svg-icon.component";
     text-align: center;
     color: #fff;
     
-    .section {
-    
-      h3 {
+    h3 {
         margin-top: 30px;
         
         font-size: 24px;
         font-weight: 600;
         letter-spacing: 2px;
       }
-    }
-    
-    ul {
+      
+      ul {
       list-style-type: none;
       padding: 0;
       
@@ -100,20 +76,9 @@ import {SvgIconComponent} from "../svg-icon/svg-icon.component";
       }
     }
     
-    .media {
-      margin-top: 30px;
-      
-      display: flex;
-      justify-content: center;
-      
+    app-social-network {
       grid-column: 2;
       place-self: center;
-      
-      app-svg-icon {
-        margin: 0 10px;
-        
-        cursor: pointer;
-      }
     }
   }
   `,

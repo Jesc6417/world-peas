@@ -32,6 +32,8 @@ import {ButtonHeaderComponent} from "../button/button-header.component";
   
         li {
           margin-right: 48px;
+          padding: 13px 10px;
+            
           a {
             text-decoration: none;
             color: #000;
@@ -39,6 +41,16 @@ import {ButtonHeaderComponent} from "../button/button-header.component";
             font-size: 16px;
             font-weight: normal;
           }
+            &:hover {
+             background-color: rgba(66, 107, 31, 0.8);
+             border-radius: 8px;
+                
+                a {
+                    color: #fff;
+                    
+                }
+             
+            }
         }
       }
     }
