@@ -1,14 +1,16 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import {FooterComponent} from "./2-common/footer/footer.component";
 import { HeaderComponent } from './2-common/header/header.component';
 
 @Component({
   selector: 'app-root',
-  standalone: true, imports: [ RouterOutlet, HeaderComponent ],
+  standalone: true, imports: [RouterOutlet, HeaderComponent, FooterComponent],
   template: `
     <div class="container">
       <app-header />
-      <router-outlet></router-outlet>
+      <router-outlet />
+      <app-footer />
     </div>
   `,
   styles: [`
@@ -21,9 +23,15 @@ import { HeaderComponent } from './2-common/header/header.component';
 
     }
 
-    app-header {
-      width: 100%;
+    @media screen and (max-width: 1024px) {
+      .container {
+        width: 1024px;
       }
+    }
+
+    app-header, app-footer {
+      width: 100%;
+    }
   `],
 })
 export class AppComponent {
