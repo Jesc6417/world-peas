@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import {FooterComponent} from "./2-common/footer/footer.component";
-import { HeaderComponent } from './2-common/header/header.component';
+import {Component} from '@angular/core';
+import {RouterOutlet} from '@angular/router';
+import {FooterComponent, HeaderComponent} from "@world-peas/common";
 
 @Component({
   selector: 'app-root',

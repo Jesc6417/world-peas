@@ -1,6 +1,6 @@
-import { ComponentFixture, TestBed } from '@angular/core/testing';
+import {ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { DisplayButtonComponent } from './display-button.component';
+import {DisplayButtonComponent} from './display-button.component';
 
 describe('DisplayButtonComponent', () => {
   let component: DisplayButtonComponent;

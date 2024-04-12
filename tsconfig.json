@@ -22,7 +22,21 @@
     "lib": [
       "ES2022",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@world-peas/feature": [
+        "./src/app/1-feature"
+      ],
+      "@world-peas/common": [
+        "./src/app/2-common"
+      ],
+      "@world-peas/domain": [
+        "./src/app/3-domain"
+      ],
+      "@world-peas/infrastructure": [
+        "./src/app/4-infrastructure"
+      ]
+    }
   },
   "angularCompilerOptions": {
     "enableI18nLegacyMessageIdFormat": false,

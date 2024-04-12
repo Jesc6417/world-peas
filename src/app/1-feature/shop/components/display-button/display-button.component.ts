@@ -1,18 +1,17 @@
+import {CommonModule} from '@angular/common';
 import {ChangeDetectionStrategy, Component, input} from '@angular/core';
-import bootstrap from "../../../../main.server";
-import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-display-button',
   standalone: true,
   imports: [CommonModule],
   template: `
-      <input type="button" [value]="title()" [ngClass]="{selected: selected()}" />
+      <button [ngClass]="{selected: selected()}"><ng-content /></button>
   `,
   styles: `
     @import 'variables';
     
-    input {
+    button {
       font-size: 16px;
       font-weight: 600;
       
@@ -31,7 +30,7 @@ import { CommonModule } from '@angular/common';
         background-color: rgba(66, 107, 31, 0.8);
         border-radius: 20px;
               
-        color: #fff;
+        /*color: #fff;*/
       }
     }
     
